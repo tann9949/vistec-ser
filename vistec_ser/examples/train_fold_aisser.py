@@ -69,7 +69,7 @@ def run_fold(fold: int, config_path: str, include_zoom: bool, n_iter: int = 25, 
         # train
         print(f"============= Running Experiment {i} =============")
         print("\n>>Training Model...\n")
-        trainer.fit(model, train_dataloader=train_dataloader, val_dataloaders=val_dataloader)
+        trainer.fit(model, train_dataloaders=train_dataloader, val_dataloaders=val_dataloader)
         trainer.save_checkpoint(f"{thaiser_module.experiment_dir}/weights/final{i}.ckpt")
 
         # test
